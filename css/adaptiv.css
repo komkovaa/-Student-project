@@ -1,0 +1,15 @@
+@media screen and (max-width: 1450px) {
+	.container {
+		width: 1400px;
+	}
+	
+@media screen and (max-width: 720px) {
+	.container {
+		width: 650px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 816px;
+		padding: 0;
+	}	

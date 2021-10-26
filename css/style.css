@@ -1,0 +1,289 @@
+html {
+	height: 100%;
+	min-width: 320px;
+	}
+
+body {
+	margin:0;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	font: normal 16px/24px Arial;
+	}
+a {
+	text-decoration: none;
+	}
+a:hover {
+	text-decoration: underline;
+}
+
+.container {
+	margin:0 auto;
+	width: 1206px;
+   }
+
+
+header {
+	background: #FFFFE0;
+	width: 100%;
+	height: 180px;
+	flex: none;
+	z-index: 999;
+    position: relative;
+	}
+	
+main {
+	flex: 1 0 auto;	
+	min-height: 100%;
+	padding-bottom: -358px;	
+	position: relative;
+	}
+	
+footer {		
+	height: 358px;
+	background: #FFFFE0;
+	flex: 0 0 auto;
+	position: absolute;
+	bottom: 0;
+	}
+
+header .container {
+	width: 1170px;
+	height: 143px;
+	display: flex;
+	align-items: end;
+	background-color: #1ff;
+    margin-top: 25px;
+	justify-content: flex-start;
+	flex-wrap: nowrap; 
+	padding-right: 15px;
+    padding-left: 15px;
+	position: relative;
+}
+
+.logo {
+	display: block;
+	flex: 0 0 94px;
+	height: 143px;
+	width: 94px;
+	background: #a99793;
+	cursor: pointer;
+}
+
+.info-block {
+	background: white;
+	display: block;
+	height: 143px;
+	width: 215px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.contacts {
+	position: relative;
+	flex-direction: row;
+	cursor: pointer;
+}
+
+.icons {
+	position: absolute;
+	right: 0;
+	cursor: pointer;
+}
+
+.fa-user {
+	top: 0;
+	left: 0;
+}
+
+.link {
+	right: 0;
+	height: 64px;
+	width: 155px;
+}
+
+
+i.far,
+i.fas {
+	color: white;
+	vertical-align: middle;
+	height: 40px;
+	width: 40px;
+	background: #a99793;
+	border-radius: 100%;
+	font-size: 24px;
+	position: relative;
+	text-align: center;
+}
+
+.fa-layers-counter {
+	background: #6c5b57;
+	height: 19px;
+	width: 19px;
+	color: white;
+	font-weight: 500;
+    font-size: 12px;
+	border-radius: 100%;
+    position: absolute;
+	top: -2px;
+	right: -2px;
+	vertical-align: middle
+	text-align: center;
+}
+
+.main-menu {
+	display: block;
+	height: 124px;
+	width: 950px;
+	padding-left: 45px;
+	color: #000;
+	font-family: Montserrat;
+    font-weight: 300;
+	
+}
+.searchline {
+	height: 46px;
+	max-width: 450px;
+	margin-bottom: 30px;
+	display: flex;
+	border-bottom: 2px solid #6c5b57;
+	color: #c4c4c4;
+}
+.header-search-btn, .header-search-input {
+	background: white;
+	border: none;
+	vertical-align: middle;
+}
+.header-search-btn {
+	cursor: pointer;
+}
+.header-search-input {
+	height: 30px;
+	margin-bottom: 10px;
+    width: 85%;
+    padding-top: 15px;
+    padding-left: 20px;
+}
+
+i.fa-search {
+	background: white;
+	color: #c4c4c4;
+	padding: 0;
+	height: 42px;
+	width: 25px;
+}
+
+.menu, .menu2 {
+	display: inline-block;
+	justify-content: space-around;
+	cursor: pointer;
+
+}
+
+
+	
+/* actions */
+.actionband {
+	background: #a99793;
+	color: #fff;
+	text-transform: uppercase;
+}
+.actionband .container {
+	display: flex;
+	padding: 16px;
+	align-items: center;
+	justify-content: center;
+}
+.discount,
+.retaimer,
+.sept,
+.num {
+	font: bold 40px/1 Arial;
+}
+.toptext,
+.subnum {
+	font: normal 12px/24px Arial;
+}
+.retaimer {
+	border-left: 1px solid #fff;
+	padding: 24px 0 0 24px;
+	margin-left: 24px;
+	position: relative;
+	text-align: center;
+}
+.toptext {
+	position: absolute;
+	top: 0;
+	left: 24px;
+	right: 0;
+}
+.sept,
+.num {
+	display: inline-block;
+	vertical-align: top;
+}
+.sept {
+	padding: 12px 0;
+}
+.num {
+	padding-bottom: 24px;
+	position: relative;
+	min-width: 50px;
+}
+.subnum {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+/* slider */
+img {
+	width: 302px;
+	height: 302px;
+}
+.slider .container {
+	width: 1206px;
+	height: 421px;
+	position: relative;
+}
+
+.slider_desk {
+	width: 3020px;
+	display: block;
+	overflow: hidden;
+	position: relative;
+	margin: 0;
+    padding: 0;
+	transform: translate3d(-604px, 0, 0)
+}
+.slider_block {
+	position: absolute;
+	display: block;
+	width: 302px;
+	height: 302px;
+	left: 0;
+	top: 0;
+	z-index: -1;
+}
+.slider_block.curr {
+	z-index: 1;
+}
+.slider button {
+	position: absolute;
+	color: white;
+	border: none;
+	border-radius: 4px;
+	font-size: 32px;
+	line-height: 46px;
+	height: 46px;
+	width: 46px;
+	top: calc(50% - 23px);
+	cursor: pointer;
+}
+.slider .to_left {
+	left: 16px;
+}
+.slider .to_right {
+	right: 16px;
+}
