@@ -1,15 +1,331 @@
 @media screen and (max-width: 1450px) {
 	.container {
-		width: 1400px;
+		width: 1206px;
 	}
-	
-@media screen and (max-width: 720px) {
+	.item-desk {
+		grid-template-columns: repeat(4, 200px);
+	}
+}
+@media screen and (max-width: 1200px) {
+	.container {
+		width: 1000px;
+	}
+	header .container {
+		width: 1000px;
+		margin: auto;
+		padding: 0;
+	}
+	nav a {
+		margin-right: 10px;
+		font-size: 16px;
+	}
+	.searchline {
+		height: 46px;
+		max-width: 400px;
+}
+	.icons {
+	position: relative;
+	top: 0;
+	}
+	.info-block {
+		height: 80px;
+		width: 295px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.item-desk {
+		grid-template-columns: repeat(3, 200px);
+	}
+	.catalog aside + article {
+		margin-left: 0;
+	}
+	.link-item {
+		width: 279px;
+	}
+	.link-item .instagram-link {
+	padding: 12px 20px 12px 40px;
+	margin: 0 100px 6px 0;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.container {
+		width: 750px;
+	}
+	header .container {
+		width: 750px;
+		margin: auto;
+		padding: 0;
+	}
+	nav a {
+		margin-right: 10px;
+		font-size: 16px;
+	}
+	.searchline {
+		height: 46px;
+		max-width: 250px;
+}
+	.icons {
+	position: relative;
+	top: 0;
+	}
+	.info-block {
+		height: 80px;
+		width: 220px;
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	i.far,
+	i.fas {
+		height: 30px;
+		width: 30px;
+		font-size: 16px;
+	}
+	i.far::before, 
+	i.fas::before {
+		padding: 7px 0;
+		width: 30px;
+	}
+	.banner {
+		height: 400px;
+	}
+	.banner-item {
+		display: flex;
+		width: 100%;
+		height: 400px;
+	}
+	.banner h1 {
+    font-size: 30px;
+	line-height: 1.2;
+	}
+	.banner-link {
+		height: 25px;
+		width: 180px;
+		font-size: 16px;
+	}
+	.title-block {
+		max-width: 600px;
+	}
+	.catalog aside {
+		width: 120px;
+		height: 60px;
+	}
+	.main-menu {
+		padding-left: 10px;
+	}
+	.mom {
+		font-size: 16px;
+		height: 60px;
+		padding-left: 5px;
+		font-size: 14px;
+	}
+	.mom .title::before {
+	content: '';
+	}
+	.mom.open .title::before {
+		content: '';
+	}
+	a .title:hover {
+		content: '';
+	}
+	a.open .title:hover {
+		content: '';
+	}
+	.link-item {
+		width: 226px;
+	}
+	.link-item .instagram-link {
+	padding: 12px 20px 12px 40px;
+	margin: 0 70px 6px 0;
+	}
+	.accordeon .level1 {
+		font-size: 12px;
+	}
+	.accordeon .level2 {
+		font-size: 8px;
+	}
+}
+@media screen and (max-width: 830px) {
 	.container {
 		width: 650px;
+	}
+	header .container {
+		width: 650px;
+	}
+	.catalog aside + article {
+		margin-left: 0;
+	}
+	.catalog aside {
+		width: 240px;
+		float: top;
+	}
+	.link-item {
+		width: 226px;
+	}
+	.link-item .instagram-link {
+	padding: 12px 20px 12px 40px;
+	margin: 0 70px 6px 0;
+	}
+	.item-desk {
+		margin-top: 100px;
+	}
+	.mom {
+		margin-left: 20px;
+		height: 20px;
+		padding: 16px;
+	}
+	.footer-link {
+	max-width: 650px;
+	}
+	.footer-logo {
+		margin-left: 0;
+		width: 0;
+	}
+	.footer-logo .logo {
+		height: 0;
+		width: 0;
+	}
+	.link-item {
+		width: 179px;
+	}
+	.link-item .instagram-link {
+	padding: 12px 20px 12px 40px;
+	margin: 0 0 6px 0;
+	}
+	.accordeon {
+		height: 0;
+		width: 0;
+	}
+}
+@media screen and (max-width: 650px) {
+	.container {
+		width: 320px;
+	}
+	header .container {
+		width: 320px;
+		height: 180px;
+	}
+	.item-desk {
+		grid-template-columns: repeat(1, 200px);
+	}
+	.bottom-block {
+		max-width: 320px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		height: 816px;
-		padding: 0;
-	}	
+	}
+	.bottom-block .link-item .head-link {
+		height: 350px;
+		display: none; 
+	}
+	.link-item {
+		margin-top: 15px;
+		width: 300px;
+	}
+	.link-item .instagram-link {
+		padding: 12px 20px 12px 40px;
+		margin: 0 100px 6px 0;
+	}
+	.link-block-footer {
+		height: 50px;	
+	}
+	.top-block {
+		max-width: 320px;
+		display: flex;
+		flex-direction: column;
+	}
+	.top-block .link-item {
+		height: 94px;
+	}
+	.searchline {
+		display: none;
+	}
+	nav a {
+		font-size: 14px;
+		font-weight: 600;
+		line-height: 1;
+	}
+	.logo {
+		height: 100%;
+	}
+	.mom {
+		margin-left: 69px;
+		width: 170px;
+	}
+	.info-block .link a {
+		font-size: 15px;
+	}
+	.contacts span {
+		font-size: 11px;
+	}
+	.actionband .container {
+	display: flex;
+	flex-direction: column;
+	padding: 16px;
+	align-items: flex-start;
+	max-width: 320px;
+}
+	.discount,
+	.retaimer,
+	.sept,
+	.num {
+		font: bold 20px/1 Arial;
+	}
+	.retaimer {
+		border-top: 1px solid #fff;
+		border-left: none;
+		padding: 24px 0 0 0;
+		margin: 0 auto;	
+	}
+	.discount {
+	margin: 0 auto;
+	}
+	
+	.banner {
+		height: 800px;
+	}
+	.banner-items {
+		display: block;
+		width: 100%;
+	}
+	.banner h1 {
+    font-size: 20px;
+	line-height: 1;
+	}
+	.banner-link {
+		display: block;
+		height: 20px;
+		width: 150px;
+		font-size: 14px;
+	}
+	.slaider {
+		max-width: 320px;
+	}
+	.slider .container {
+	height: 200px;
+}
+	.slider_desk {
+		height: 100px;
+	}
+	.slider_block_all {
+		height: 100px;
+	}
+	.title-block {
+		max-width: 320px;
+		display: block;
+		padding-left: 100px;
+	}
+	.p {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+
+	.instagram-link {
+		margin-top: 0;
+		font-size: 18px;
+		margin-left: 30px;
+		margin-bottom: 20px;
+	}
+	
+	
+}

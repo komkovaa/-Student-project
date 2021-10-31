@@ -11,11 +11,11 @@
 		
         <link href="css/adaptiv.css" rel="stylesheet">
 		
-		<link href="css/animation.css" rel="stylesheet">
-		
         <script src="js/jquery-3.6.0.min.js"></script>
         
         <script src="js/main.js"></script>
+		
+		<script src="js/defs.js"></script>
 		
     </head>
     
@@ -31,29 +31,31 @@
 						</button>
 						<input class='header-search-input' name='search' type='text' placeholder='Поиск по сайту'>
 					</form>
-					<div class='menu'>Для кормящих мам</div>
-					<div class='menu'>Для беременных</div>
-					<div class='menu2'>Записаться в шоурум</div>
-					<div class='menu'>Инфо</div>
+					<a href="index.html">Главная страница</a>
+					<a href="catalog.html">Для кормящих мам></a>
+					<a href="#">Для беременных></a>
+					<a href="item.html">Товар</a>
+					<a href="order.html">Корзина</a>
+					<a href="contacts.html">Контакты</a>
 				</nav>
 				<div class='info-block'>
 					<div class='contacts'>	
 						<i class="fas fa-user" title='Войти'></i>
 						<div class='link'>
-							<span class='tel'>+7 495 401 6950</span>
-							<span class='tel2'>+7 909 950 6950</span>
-							<span class='mode'>пн-сб с 10.00 до 18.00</span>
-						</div>
+							<a class='tel' href='#'>+7 495 401 69 50</a><br>
+							<a class='tel' href='#'>+7 909 950 69 50</a><br>
+							<span class='time'>пн-сб с 10.00 до 18.00</span>
+						</div>	
+						
+						
 					</div>
 					<div class='icons'>
 						<span class='fa-layers fa-fw'>
 							<i class="far fa-heart" title='Избранное'></i>
-							<span class="fa-layers-counter">0</span>
 						</span>
 						
 						<span class='fa-layers fa-fw'>
 							<i class="fas fa-shopping-basket" title="Корзина"></i>
-							<span class="fa-layers-counter">0</span>
 						</span>
 					</div>
 				</div>
@@ -65,7 +67,7 @@
                 <div class="container">
                     <div class="discount">СКИДКА 30%!</div>
                     
-                    <div class="retaimer" data-fordate="11-01-2021">
+                    <div class="retaimer" data-fordate="11-03-2021">
                         <div class="toptext">до окончания акции осталось</div>
                         
                         <span class="num"></span>
@@ -85,37 +87,53 @@
                 </div>
             </section>
 			
-			<section>
+			<section class='banner'>
 				<div class='container'>
-				
+					<h1>Удобная и стильная одежда для беременных и кормящих мам</h1>
+					<div class='banner-items'>
+						<div class='banner-item'>
+							<a class='banner-link' href="catalog.html">Для кормящих мам</a>
+						</div>
+						<div class='banner-item'>
+							<a class='banner-link' href="catalog2.html">Для беременных</a>
+						</div>
+					</div>
 				</div>
 			</section>
 			
 			<section class="slider">
 				<div class='container'>
+					<div class='title-block'>
+						<p class='p'>Мы в Instagram</p>
+						<a class='instagram-link' target="_blank" href='#'>@iva_design_ru</a>
+					</div>
 					<div class='slider_desk'>
-						<div class='slider_block_curr'>
-							<img src='images/slider0.jpg' alt='picture0'>
+						<button type='button' class="fas fa-angle-left"></button>
+						<div class='slider_block_all'>
+							<div class='slider_block_curr'>
+								<img src='images/slider0.jpg' class='responsive' width="1440" height="1800" alt='picture0'>
+							</div>
+							<div class='slider_block'>
+								<img src='images/slider1.jpg' class='responsive' width="1440" height="1800" alt='picture1'>
+							</div>
+							<div class='slider_block'>
+								<img src='images/slider2.jpg' class='responsive' width="1440" height="1800" alt='picture2'>
+							</div>
+							<div class='slider_block'>
+								<img src='images/slider3.jpg' class='responsive' width="1440" height="1800" alt='picture3'>
+							</div>
+							<div class='slider_block'>
+								<img src='images/slider4.jpg' class='responsive' width="1440" height="1800" alt='picture4'>
+							</div>
+							<div class='slider_block'>
+								<img src='images/slider5.jpg' class='responsive' width="1440" height="1800" alt='picture5'>
+							</div>
 						</div>
-						<div class='slider_block_curr'>
-							<img src='images/slider1.jpg' alt='picture1'>
-						</div>
-						<div class='slider_block_curr'>
-							<img src='images/slider2.jpg' alt='picture2'>
-						</div>
-						<div class='slider_block_curr'>
-							<img src='images/slider3.jpg' alt='picture3'>
-						</div>
-						<div class='slider_block'>
-							<img src='images/slider4.jpg' alt='picture4'>
-						</div>
-						<div class='slider_block'>
-							<img src='images/slider5.jpg' alt='picture5'>
-						</div>
+						<button type='button' class="fas fa-angle-right"></button>
 					</div>
 				</div>	
-				<button type='button' class='to_left'>&#9668;</button>
-				<button type='button' class='to_right'>&#9658;</button>
+				
+				
 			</section>
 			
 			<section>
@@ -140,7 +158,53 @@
         
         <footer>
 			<div class='container'>
-			
+				<div class='footer-logo'>
+					<img src="images/logo.png" class='logo' alt="<Логотип>">
+				</div>
+				<div class='footer-link'>
+					<div class='top-block'>
+						<div class='link-item'>
+							<span class='head-link'>Кабинет покупателя</span>
+							<div class='link-block-footer'>
+								<a href='#'>Войти</a><br>
+								<a href='#'>Создать учетную запись</a>
+							</div>
+						</div>
+						<div class='link-item'>
+							<span class='head-link'>Магазин</span>
+							<div class='link-block-footer'>
+								<a href='#'>О нас</a><br>
+								<a href='#'>Мы в instagram</a>
+							</div>
+						</div>
+						<div class='link-item'>
+							<span class='head-link'>Оформление заказа</span>
+							<div class='link-block-footer'>
+								<a href='#'>Оплата и доставка</a><br>
+								<a href='#'>Размерная сетка</a>
+							</div>
+						</div>
+					</div>
+					<div class='bottom-block'>
+						<div class='link-item'>
+							<span class='head-link'>Адрес</span>
+							<p class='adress'>г. Москва, ул. Карьер, д. 2А,<br>стр.1, офис 138</p>
+							<p class='time'>ПН-СБ с 10.00 до 18.00</p>
+						</div>
+						<div class='link-item'>
+							<span class='head-link'>Телефон</span>
+							<div class='link-block-footer'>
+								<a class='tel' href='#'>+7 495 401 69 50</a><br>
+								<a class='tel' href='#'>+7 909 950 69 50</a>
+							</div>
+						</div>
+						<div class='link-item'>
+							<a class='link-purple' href='#'>welcometo@ivadesign.ru</a>
+							<a class='link-purple' href='#'>Посмотреть на карте</a>
+							<a class='instagram-link' href='#'>@iva_design_ru</a>
+						</div>
+					</div>
+				</div>
 			</div>
 		</footer>
     </body>

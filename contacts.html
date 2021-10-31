@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Главная страница проекта</title>
+		
+		<link rel="stylesheet" href="css/all.css">
+        
+        <link href="css/style.css" rel="stylesheet">
+		
+        <link href="css/adaptiv.css" rel="stylesheet">
+		
+		<link href="css/animation.css" rel="stylesheet">
+		
+        <script src="js/jquery-3.6.0.min.js"></script>
+        
+        <script src="js/main.js"></script>
+		
+		<script src="js/defs.js"></script>
+		
+		<script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A6dab4440ad7995f1d3db7f1d4db887129bce0cee419752779c6678dcd6ec18d8&amp;width=530&amp;height=372&amp;id=yandexmap&amp;lang=ru_RU&amp;scroll=true"></script>
+		
+    </head>
+
+    <body>
+        <header class='header'>
+			<div class='container'>
+				<img src="images/logo.png" class='logo' alt="<Логотип>">
+				<nav class='main-menu'>
+					<form class="searchline" method='get' action=''>
+						<button class='header-search-btn'>
+							<i class="fas fa-search"></i>
+						</button>
+						<input class='header-search-input' name='search' type='text' placeholder='Поиск по сайту'>
+					</form>
+					<a href="index.html">Главная страница</a>
+					<a href="catalog.html">Для кормящих мам></a>
+					<a href="#">Для беременных></a>
+					<a href="item.html">Товар</a>
+					<a href="order.html">Корзина</a>
+					<a href="contacts.html">Контакты</a>
+				</nav>
+				<div class='info-block'>
+					<div class='contacts'>	
+						<i class="fas fa-user" title='Войти'></i>
+						<div class='link'>
+							<a class='tel' href='#'>+7 495 401 69 50</a><br>
+							<a class='tel' href='#'>+7 909 950 69 50</a><br>
+							<span class='time'>пн-сб с 10.00 до 18.00</span>
+						</div>	
+						
+						
+					</div>
+					<div class='icons'>
+						<span class='fa-layers fa-fw'>
+							<i class="far fa-heart" title='Избранное'></i>
+						</span>
+						
+						<span class='fa-layers fa-fw'>
+							<i class="fas fa-shopping-basket" title="Корзина"></i>
+						</span>
+					</div>
+				</div>
+			</div>
+        </header>
+		<main>
+            <section>
+                <div class="container">
+                    <h1>Контакты</h1>
+                </div>
+            </section>
+            
+			<section>
+				<div class="container">
+				 <p>Адрес офиса:</p>
+					<p>117449, г. Москва, ул.Карьер д.2А стр.1 офис 138</p>
+					<p>Телефон в офисе:<br>
+					+7-991-101-50-53<br>
+					8-800-201-50-53<br>
+					с 10 до 20 ежедневно</p>
+					<p>Контакт для связи в WhatsApp:<br>
+
+					<p>Москва +7 916 979 77 06<br>
+
+					<p>Регионы +7 918 890 77 99</p>
+
+					<p>e-mail:<br>
+					welcometo@ivadesign.ru</p>
+				</div>
+			</section>
+			
+            <section class="yandexmap">
+                <div class="container">
+                    <div id="yandexmap"></div>
+                </div>
+            </section>
+            
+        </main>
+        
+        <footer>
+			<div class='container'>
+				<div class='footer-logo'>
+					<img src="images/logo.png" class='logo' alt="<Логотип>">
+				</div>
+				<div class='footer-link'>
+					<div class='top-block'>
+						<div class='link-item'>
+							<span class='head-link'>Кабинет покупателя</span>
+							<div class='link-block-footer'>
+								<a href='#'>Войти</a><br>
+								<a href='#'>Создать учетную запись</a>
+							</div>
+						</div>
+						<div class='link-item'>
+							<span class='head-link'>Магазин</span>
+							<div class='link-block-footer'>
+								<a href='#'>О нас</a><br>
+								<a href='#'>Мы в instagram</a>
+							</div>
+						</div>
+						<div class='link-item'>
+							<span class='head-link'>Оформление заказа</span>
+							<div class='link-block-footer'>
+								<a href='#'>Оплата и доставка</a><br>
+								<a href='#'>Размерная сетка</a>
+							</div>
+						</div>
+					</div>
+					<div class='bottom-block'>
+						<div class='link-item'>
+							<span class='head-link'>Адрес</span>
+							<p class='adress'>г. Москва, ул. Карьер, д. 2А,<br>стр.1, офис 138</p>
+							<p class='time'>ПН-СБ с 10.00 до 18.00</p>
+						</div>
+						<div class='link-item'>
+							<span class='head-link'>Телефон</span>
+							<div class='link-block-footer'>
+								<a class='tel' href='#'>+7 495 401 69 50</a><br>
+								<a class='tel' href='#'>+7 909 950 69 50</a>
+							</div>
+						</div>
+						<div class='link-item'>
+							<a class='link-purple' href='#'>welcometo@ivadesign.ru</a>
+							<a class='link-purple' href='#'>Посмотреть на карте</a>
+							<a class='instagram-link' href='#'>@iva_design_ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+    </body>
+</html>
