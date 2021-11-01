@@ -248,30 +248,32 @@ function galSlide(direction) {
 }
 
 
-function sliderRun(direction) {
-    if (slideFlag) return;
-    slideFlag = true;
-    let hlp = $('.slider_block').index($('.slider_block_curr'));
-    let width = $('.slider_block_curr').width();
+function sliderRun(slideclass, direction) {
+    if (slideFlag[slideclass]) return;
+    slideFlag[slideclass] = true;
+    let hlp = $('.' + slideclass + '_block').index($('.' + slideclass + '_block.curr')[0]);
+    let width = $('.' + slideclass + '_block.curr').width();
     let next;
-    if (direction == 'toleft') {
-        next = hlp + 1;
-        if (next > $('.slider_block').length - 1) next -= $('.slider_block').length;
-        $('.slider_block').eq(next).css('left', width + 'px').addClass('curr');
-        next = '-=' + width;
-    } else if (direction == 'toright') {
+	let prev;
+    if (direction == 'toright') {
         next = hlp - 1;
-        if (next < 0) next += $('.slider_block').length;
-        $('.slider_block').eq(next).css('left', -width + 'px').addClass('curr');
+		prev = hlp + $('.' + slideclass + '_block.curr').length - 1;
+        if (next < 0) next += $('.' + slideclass + '_block').length;
+		if (prev > $('.' + slideclass + '_block').length - 1) prev -= $('.' + slideclass + '_block').length;
+        $('.' + slideclass + '_block').eq(next).css('left', -width + 'px').addClass('curr');
+        $('.' + slideclass + '_block').eq(prev).addClass('eliminate');
         next = '+=' + width;
     } else {
-        console.error('invalid direction');
-        slideFlag = false;
-        return;
+		next = hlp + $('.' + slideclass + '_block.curr').length;
+		prev = hlp;
+		if (next > $('.' + slideclass + '_block').length - 1) next -= $('.' + slideclass + '_block').length;
+        $('.' + slideclass + '_block').eq(next).css('left', (width * $('.' + slideclass + '_block.curr').length)).addClass('curr');
+        $('.' + slideclass + '_block').eq(prev).addClass('eliminate');
+        next = '-=' + width;
     }
-    $('.slider_block_curr').animate({left: next}, 2000, function() {
-        $('.slider_block').eq(hlp).removeClass('curr').prop('style','');
-        slideFlag = false;
+    $('.' + slideclass + '_block.curr').animate({left: next}, 2000, function() {
+        $('.' + slideclass + '_block.eliminate').removeClass('curr').removeClass('eliminate');
+        slideFlag[slideclass] = false;
     });
 }
 

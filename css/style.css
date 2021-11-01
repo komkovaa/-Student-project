@@ -372,12 +372,11 @@ nav a {
     height: 381px;
 	
 }
-.slider_block,
-.slider_block_curr {
+.slider_block {
 	display: flex;
 	flex-direction: row;
 	flex: 0 0 100%;
-    max-width: 25%;
+    max-width: 50%;
     justify-content: center;
     align-items: center;
 }

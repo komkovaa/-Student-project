@@ -68,23 +68,26 @@ $(function(){
   
 
 
-   if ($('.retaimer').length) {
+	if ($('.retaimer').length) {
         retimer();
         setInterval(retimer, 500);
     }
 	
 	
-	 if ($('slider_block').length) {
-        setInterval(function(){
-            sliderRun('toleft');
+	if ($('.slider_block').length) {
+        slideFlag['slider'] = false;
+		$('.slider_block.curr').eq(1).css('left', $('.slider_block.curr').width() + 'px');
+        setInterval(function() {
+            sliderRun('slider', 'toleft');
         }, 4000);
-        $('.slider .fa-angle-left').click(function(){
-            sliderRun('toleft');
+        $('.slider .to_left').click(function() {
+            sliderRun('slider', 'toleft');
         });
-        $('.slider .fa-angle-right').click(function(){
-            sliderRun('toright');
+        $('.slider .to_right').click(function() {
+            sliderRun('slider', 'toright');
         });
     }
+    
 	
 	
 	

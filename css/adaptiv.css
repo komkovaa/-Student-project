@@ -326,6 +326,19 @@
 		margin-left: 30px;
 		margin-bottom: 20px;
 	}
-	
+	.article-top {
+		display: block;
+	}
+	.price_desk {
+		margin-left: 69px;
+		width: 170px;
+	}
+	.price_desk .price {
+	font-size: 24px;
+	margin-left: 30px;
+	}
+	.price strong {
+		font-size: 32px;
+	}
 	
 }
