@@ -148,6 +148,10 @@ i.fas::before {
 	position: absolute;
 	display: block;
 }
+i.far:hover, 
+i.fas:hover {
+	background: #c4c4c4;
+}
 .main-menu {
 	display: block;
 	height: 124px;

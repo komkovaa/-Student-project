@@ -194,7 +194,7 @@
 	}
 	.slider .container {
 	height: 350px;
-}
+	}
 	.slider_desk {
 		height: 250px;
 	}
@@ -355,16 +355,82 @@
 	.price strong {
 		font-size: 32px;
 	}
-
-.gallery_window { 
-	width: 270px;
-	height: 60px;
-}
-.gallery_rail {
-	gap: 2px;
-}
-.gallery img {
-	padding: 0px;
-}
-
+	.gallery_window { 
+		width: 270px;
+		height: 60px;
+	}
+	.gallery_rail {
+		gap: 2px;
+	}
+	.gallery img {
+		padding: 0px;
+	}
+	.table table {
+		display: block;
+	}
+	.table tr {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.table th,
+	.table td {
+		display: block;
+		width: 25%;
+	}
+	.table .id {
+		width: 24px;
+		flex: none;
+	}
+	.table .delete {
+		width: 40px;
+		flex: none;
+	}
+	.table tr:first-child th,
+	.table tr:last-child th {
+		border: none;
+	}
+	.table tr:first-child {
+		border-bottom: 2px solid #000;
+		background: #a99793;
+	}
+	.table tr:last-child {
+		border-top: 2px solid #000;
+		background: #a99793;
+	}
+	.table .quantity .inner {
+		justify-content: space-between;
+	}
+	.table .quantity,
+	.table .price,
+	.table .summa {
+		width: 80px;
+		flex: none;
+	}
+	.table th.name,
+	.table th.quantity {
+		padding: 8px;
+		font-size: 14px;
+	}
+	.table tr:last-child th.itog {
+		width: 130px;
+	}
+	.table th.name,
+	.table tr:last-child th:first-child,
+	.table .id {
+		display: none;
+	}
+	.table .name {
+		width: 100%;
+		font-weight: bold;
+	}
+	.table tr:last-child {
+		display: block;
+	}
+	.table tr:last-child th {
+		width: 50%;
+		flex: none;
+	}
+	.customer {
+		width: 160px;
+	}
 }

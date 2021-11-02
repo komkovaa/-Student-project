@@ -1,8 +1,8 @@
 let slideFlag = false;
 let currentSlide = 0;
 let ajaxFlag = false;
-let gapFlag = false; // флаг нужен для блокировки новых запусков функции во время, когда она уже запущена
-let galstep, galgap; // объявляем переменные глобально, чтобы видеть их как из функции, так и вне ее
+let gapFlag = false; 
+let galstep, galgap; 
 let tovardata = [
     {
         id: 1,
@@ -30,16 +30,16 @@ function makeOrder() {
     if (ajaxFlag) return;
     ajaxFlag = true;
     let formdata = {};
-    // собираем данные из tovardata и полей формы
+
     formdata.zakaz = tovardata;
     formdata.name = $('#name').val();
     formdata.phone = $('#phone').val();
     formdata.mail = $('#mail').val();
     formdata.comment = $('#comment').val();
     formdata.date = $('#date').val();
-    // проверяем данные на правильность заполнения. обязательные данные - name, date и phone или mail. в tovardata должен быть хотя бы один элемент (товар).
+  
     if (!formdata.name || !formdata.date || (!formdata.phone && !formdata.mail)) {
-        // если требования не выполнены, заканчиваем работу
+      
         alert('Не заполнены обязательные поля!');
         ajaxFlag = false;
         return;
@@ -53,13 +53,10 @@ function makeOrder() {
         method: $('.form form').prop('method'),
         data: formdata,
         success: function(data) {
-            // оповещение пользователя о приеме заказа
+            
             console.log(data);
-            // очищаем корзину
             tovardata = [];
-            // отрисовываем пустую корзину
             writeTable();
-            // добавляем в страницу сведения о заказе
             $('.empty p').html(`Ваш заказ принят. Номер для отслеживания - ${data.id}.`);
             ajaxFlag = false;
         },
@@ -153,8 +150,6 @@ function removeTovar(id) {
 	return false;
 }
     
-    
- 
 function writeTable() {
     if (!tovardata.length) {
         $('.table, .form').remove();
@@ -198,16 +193,15 @@ function writeTable() {
 }
 function lightbox(aim){
     let src = $(aim).prop('src').split('big').join('max');
-    let w = document.documentElement.clientWidth - 200; // отступ от края и паддинг по 50 с каждой стороны
-    let h = document.documentElement.clientHeight - 200; // отступ от края и паддинг по 50 с каждой стороны
-    let sides = aim.clientWidth / aim.clientHeight; // соотношение сторон картинки
-    if (w > sides * h) { // если ширина больше, чем нужна по соотношению сторон, уменьшаем ширину
+    let w = document.documentElement.clientWidth - 200; 
+    let h = document.documentElement.clientHeight - 200; 
+    let sides = aim.clientWidth / aim.clientHeight; 
+    if (w > sides * h) { 
         w = sides * h;
-    } else if (w < sides * h) { // если высота больше, чем нужна по соотношению сторон, уменьшаем высоту
+    } else if (w < sides * h) { 
         h = w / sides;
     }
-    // и теперь у нас максимальные возможные ширина и высота при нужном соотношении сторон
-    let leftfix = w / 2 + 50; // значение поправки для положения лайтбокса по центру экрана
+    let leftfix = w / 2 + 50; 
     let hlpstr = '<div class="screen"><div class="lightbox" style="margin-left:-' + leftfix + 'px;"><button type="button">+</button><img src="' + src + '" style="width:' + w + 'px;height:' + h + 'px;"></div></div>';
     document.body.insertAdjacentHTML('beforeend', hlpstr);
     $('.screen').click(function(e){
@@ -219,20 +213,20 @@ function lightbox(aim){
     setTimeout(function(){$('.screen').addClass('active')}, 1000);
 }
 function galSlide(direction) {
-    if (gapFlag) return; // если эта функция сейчас работает, не будем ей мешать
-    gapFlag = true; // поднимаем флаг блокировки - теперь новые вызовы функции не будут исполняться
-    let hlpstr = parseInt($('.gallery_rail').css('left')); // определили текущее положение блока
-    if (direction == 'left') { // вычисляем новое положение с учетом направления движения
+    if (gapFlag) return; 
+    gapFlag = true; 
+    let hlpstr = parseInt($('.gallery_rail').css('left')); 
+    if (direction == 'left') { 
         hlpstr -= galstep;
         hlpstr -= galgap;
     } else {
         hlpstr += galstep;
         hlpstr += galgap;
     }
-    $('.gallery_rail').animate({ // плавно перемещаем блок
+    $('.gallery_rail').animate({ 
         left: hlpstr
-    }, function(){ // затем проверяем, должны ли работать кнопки в новом положении
-    // такую же проверку можно поставить в $(function(){}), если у нас может быть на странице разное число картинок.
+    }, function(){ 
+   
         if ($('.gallery_window').width() - $('.gallery_rail').width() >= parseInt(getComputedStyle($('.gallery_rail')[0]).left)) {
             $('.g_left').removeClass('active');
         } else {
@@ -243,10 +237,9 @@ function galSlide(direction) {
         } else {
             $('.g_right').addClass('active');
         }
-        gapFlag = false; // опускаем флаг - наш вызов отработал, можно делать новые вызовы
+        gapFlag = false; 
     });
 }
-
 
 function sliderRun(direction) {
     if (slideFlag) return;
@@ -285,7 +278,7 @@ function retimer() {
     let now = new Date();
     let delta = Math.floor((limit.getTime() - now.getTime()) / 1000);
     if (delta < 0) delta = 0;
-	let sec = delta % 60
+	let sec = delta % 60;
     $('.retaimer .num')[3].innerHTML = `${addChar(sec)}<span class="subnum">${multiple(sec, ['секунда', 'секунды', 'секунд'])}</span>`;
     delta = Math.floor(delta / 60);
     let minute = delta % 60;
