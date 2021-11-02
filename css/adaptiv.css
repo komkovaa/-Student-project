@@ -24,50 +24,8 @@
 		max-width: 400px;
 }
 	.icons {
-	position: relative;
-	top: 0;
-	}
-	.info-block {
-		height: 80px;
-		width: 295px;
-		position: absolute;
+		position: relative;
 		top: 0;
-		right: 0;
-	}
-	.item-desk {
-		grid-template-columns: repeat(3, 200px);
-	}
-	.catalog aside + article {
-		margin-left: 0;
-	}
-	.link-item {
-		width: 279px;
-	}
-	.link-item .instagram-link {
-	padding: 12px 20px 12px 40px;
-	margin: 0 100px 6px 0;
-	}
-}
-@media screen and (max-width: 1024px) {
-	.container {
-		width: 750px;
-	}
-	header .container {
-		width: 750px;
-		margin: auto;
-		padding: 0;
-	}
-	nav a {
-		margin-right: 10px;
-		font-size: 16px;
-	}
-	.searchline {
-		height: 46px;
-		max-width: 250px;
-}
-	.icons {
-	position: relative;
-	top: 0;
 	}
 	.info-block {
 		height: 80px;
@@ -87,6 +45,40 @@
 		padding: 7px 0;
 		width: 30px;
 	}
+	.item-desk {
+		grid-template-columns: repeat(3, 200px);
+	}
+	.catalog aside + article {
+		margin-left: 0;
+	}
+	.link-item {
+		width: 279px;
+	}
+	.link-item .instagram-link {
+	padding: 12px 20px 12px 40px;
+	margin: 0 100px 6px 0;
+	}
+	.catalog aside + article {
+		margin-left: 260px;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.container {
+		width: 750px;
+	}
+	header .container {
+		width: 750px;
+		margin: auto;
+		padding: 0;
+	}
+	nav a {
+		margin-right: 10px;
+		font-size: 16px;
+	}
+	.searchline {
+		height: 46px;
+		max-width: 250px;
+}
 	.banner {
 		height: 400px;
 	}
@@ -114,17 +106,24 @@
 	.main-menu {
 		padding-left: 10px;
 	}
+	.item-desk {
+		margin-top: 100px;
+	}
 	.mom {
-		font-size: 16px;
-		height: 60px;
-		padding-left: 5px;
 		font-size: 14px;
+		margin-left: 50px;
+		height: 20px;
+		padding: 16px;
+		width: 170px;
 	}
 	.mom .title::before {
 	content: '';
 	}
 	.mom.open .title::before {
 		content: '';
+	}
+	.product {
+		margin-top: 100px;
 	}
 	a .title:hover {
 		content: '';
@@ -139,11 +138,12 @@
 	padding: 12px 20px 12px 40px;
 	margin: 0 70px 6px 0;
 	}
-	.accordeon .level1 {
-		font-size: 12px;
+	.accordeon {
+		height: 0;
+		width: 0;
 	}
-	.accordeon .level2 {
-		font-size: 8px;
+	.catalog aside + article {
+		margin-left: 0;
 	}
 }
 @media screen and (max-width: 830px) {
@@ -167,14 +167,10 @@
 	padding: 12px 20px 12px 40px;
 	margin: 0 70px 6px 0;
 	}
-	.item-desk {
-		margin-top: 100px;
-	}
 	.mom {
 		margin-left: 20px;
-		height: 20px;
-		padding: 16px;
 	}
+	
 	.footer-link {
 	max-width: 650px;
 	}
@@ -193,9 +189,17 @@
 	padding: 12px 20px 12px 40px;
 	margin: 0 0 6px 0;
 	}
-	.accordeon {
-		height: 0;
-		width: 0;
+	.slider {
+		max-width: 830px;
+	}
+	.slider .container {
+	height: 350px;
+}
+	.slider_desk {
+		height: 250px;
+	}
+	.slider_block_all {
+		height: 250px;
 	}
 }
 @media screen and (max-width: 650px) {
@@ -250,7 +254,6 @@
 	}
 	.mom {
 		margin-left: 69px;
-		width: 170px;
 	}
 	.info-block .link a {
 		font-size: 15px;
@@ -298,17 +301,26 @@
 		width: 150px;
 		font-size: 14px;
 	}
-	.slaider {
-		max-width: 320px;
+	.slider {
+		max-width: 650px;
 	}
 	.slider .container {
-	height: 200px;
-}
+		height: 250px;
+	}
 	.slider_desk {
-		height: 100px;
+		height: 150px;
 	}
 	.slider_block_all {
-		height: 100px;
+		height: 150px;
+	}
+	.slider_desk > button {
+	top: 40px;
+	}
+	.fa-angle-left {
+		left: 4px;
+	}
+	.fa-angle-right {
+		right: 4px;
 	}
 	.title-block {
 		max-width: 320px;
@@ -329,16 +341,30 @@
 	.article-top {
 		display: block;
 	}
+	.product h1 {
+	text-align: center;
+}
 	.price_desk {
 		margin-left: 69px;
 		width: 170px;
 	}
 	.price_desk .price {
-	font-size: 24px;
-	margin-left: 30px;
+		font-size: 24px;
+		margin-left: 30px;
 	}
 	.price strong {
 		font-size: 32px;
 	}
-	
+
+.gallery_window { 
+	width: 270px;
+	height: 60px;
+}
+.gallery_rail {
+	gap: 2px;
+}
+.gallery img {
+	padding: 0px;
+}
+
 }

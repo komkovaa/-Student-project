@@ -26,6 +26,7 @@ a:hover {
 .container {
 	margin:0 auto;
 	width: 1206px;
+	font: normal 16px/24px Montserrat;
    }
 
 
@@ -362,43 +363,44 @@ nav a {
 .slider_desk {
 	overflow: hidden;
 	width: 100%;
-	display: flex;
+	position: relative;
 	margin-left: 0;
 }
-.slider_block_all {
-	display: flex;
-	flex-direction: row;
-	max-width: 100%;
-    height: 381px;
-	
-}
-.slider_block {
-	display: flex;
-	flex-direction: row;
-	flex: 0 0 100%;
-    max-width: 50%;
-    justify-content: center;
-    align-items: center;
-}
-.responsive {
-    max-width: 100%;
-    height: auto;
-}
-
-button.fas {
+.slider_desk > button {
 	position: absolute;
 	color: #c4c4c4;
 	height: 40px;
 	width: 40px;
 	background: none;
 	border-radius: 100%;
-	font-stretch:  ultra-condensed;
 	font-size: 40px;
-	text-align: center;
 	border: none;
 	cursor: pointer;
+	top: 100px;
 }
-
+.slider_block_all {
+	width: 100%;
+    height: 381px;
+}
+.slider_block_all > img {
+	width: 1440px;
+	height: 1800px;
+}
+.slider_block {
+	display: none;
+	width: 25%;
+    position: absolute;
+	left: 0;
+	height: 381px;
+}
+.slider_block.curr {
+	display: block;
+	height: 381px;
+}
+.responsive {
+    max-width: 100%;
+    height: auto;
+}
 .fas::before {
 	padding: 0;
 }
@@ -575,6 +577,7 @@ p {font-size: 14px;
 	overflow: hidden;
 	position: relative;
 }
+
 .gallery_rail {
 	display: flex;
 	gap: 4px;
@@ -670,6 +673,7 @@ p {font-size: 14px;
 }
 .table tr:last-child th {
 	border-top: 2px solid #000;
+	background: #a99793;
 }
 .table td.price::after,
 .table td.summa::after,
@@ -713,6 +717,32 @@ p {font-size: 14px;
 	background: none;
 	font-size: 24px;
 	line-height: 24px;
+}
+.date {
+	width: 160px;
+}
+.customer {
+	width: 550px;
+}
+input {
+	height: 22px;
+	width: 161px;
+	font-family: Montserrat;
+	font-size: 11px;
+}
+.form button {
+	width: 200px;
+	height: 22px;
+	border: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	bottom: 0;
+	font-family: Montserrat;
+	background: #a99793;
+	font-weight: bold;
+}
+.form button:hover {
+	background: #c4c4c4;
 }
 /* datepicker */
 #calendar {
@@ -805,7 +835,6 @@ footer .container {
 	width: 82%;
 	flex-direction: row;
 	margin: 0 auto;
-	
 }
 .top-block, 
 .bottom-block {

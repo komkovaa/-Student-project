@@ -55,12 +55,12 @@
 						</span>
 						
 						<span class='fa-layers fa-fw'>
-							<i class="fas fa-shopping-basket" title="Корзина"></i>
+							<a href="order.html"> <i class="fas fa-shopping-basket" title="Корзина"></i></a>
 						</span>
 					</div>
 				</div>
 			</div>
-        </header>        
+        </header>      
         <main>
             <section>
                 <div class="container">
@@ -77,19 +77,19 @@
              <section class="form">
                 <div class="container">
                     <form action="https://jsonplaceholder.typicode.com/posts" method="POST">
-                        <fieldset>
+                        <fieldset class='customer'>
                             <legend>Данные получателя</legend>
                             
-                            <input type="text" id="name">
+                            <input type="text" id="name" placeholder="Введите имя">
                             
-                            <input type="text" id="phone">
+                            <input type="text" id="phone" placeholder="Введите номер телефона">
                             
-                            <input type="text" id="mail">
+                            <input type="text" id="mail" placeholder="Введите e-mail">
                             
-                            <textarea id="comment"></textarea>
+                            <textarea id="comment" placeholder="Введите комментарий"></textarea>
                         </fieldset>
                         
-                        <fieldset>
+                        <fieldset class='date'>
                             <legend>Дата доставки</legend>
                             
                             <input type="text" id="date" placeholder="ДД-ММ-ГГГГ" autocomplete="off">
